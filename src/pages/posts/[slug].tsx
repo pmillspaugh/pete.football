@@ -1,21 +1,9 @@
-import Header from "../../components/library/Header";
+import Post, { PostProps } from "../../components/Post";
+import { markdownToHtml } from "../../helpers/markdown.helpers";
+import { getAllPosts, getPostData } from "../../helpers/posts.helpers";
 
-type PostProps = {
-  post: {
-    slug: string;
-  };
-};
-
-const Post = ({ post }: PostProps) => {
-  return (
-    <>
-      <Header />
-      <main>
-        {post.slug}
-        {/* TODO: render post dynamically */}
-      </main>
-    </>
-  );
+const PostPage = ({ post }: PostProps) => {
+  return <Post post={post} />;
 };
 
 type Params = {
@@ -26,20 +14,26 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const { slug } = params;
+  const { metadata, mdContent } = getPostData(slug);
+
+  const htmlContent = await markdownToHtml(mdContent);
 
   return {
     props: {
-      post: { slug },
+      post: { metadata, htmlContent },
     },
   };
 }
 
 export async function getStaticPaths() {
-  // TODO: leverage util to pull all dynamic routes from md posts
+  const posts = getAllPosts();
+
   return {
-    paths: [{ params: { slug: "the-case-for-a-salary-cap-draft" } }],
+    paths: posts.map(({ slug }) => {
+      return { params: { slug } };
+    }),
     fallback: false,
   };
 }
 
-export default Post;
+export default PostPage;
