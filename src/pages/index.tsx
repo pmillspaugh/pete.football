@@ -1,33 +1,27 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Header from "../components/library/Header";
+import Home, { HomeProps } from "../components/Home/Home";
+import { getAllPosts } from "../helpers/posts.helpers";
 
-const Home: NextPage = () => {
+const HomePage = ({ postsMetadata }: HomeProps) => {
   return (
-    <div>
+    <>
       <Head>
-        <title>Pete Milly Football</title>
+        <title>Pete Milly ⋅ Football</title>
         <meta name="description" content="Fantasy football blog" />
-        {/* TODO: create custom favicon */}
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
-
-      <main>
-        <ul>
-          <li>
-            <Link href="/posts/the-case-for-a-salary-cap-draft" passHref>
-              <a>The case for a salary cap draft</a>
-            </Link>
-          </li>
-        </ul>
-      </main>
-
-      <footer></footer>
-    </div>
+      <Home postsMetadata={postsMetadata} />
+    </>
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  const postsMetadata = getAllPosts();
+
+  return {
+    props: {
+      postsMetadata,
+    },
+  };
+}
+
+export default HomePage;

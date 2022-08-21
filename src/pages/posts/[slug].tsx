@@ -1,9 +1,18 @@
+import Head from "next/head";
 import Post, { PostProps } from "../../components/Post";
 import { markdownToHtml } from "../../helpers/markdown.helpers";
 import { getAllPosts, getPostData } from "../../helpers/posts.helpers";
 
 const PostPage = ({ post }: PostProps) => {
-  return <Post post={post} />;
+  return (
+    <>
+      <Head>
+        <title>{post.metadata.title} | Pete Milly ⋅ Football</title>
+        <meta name="description" content={post.metadata.title} />
+      </Head>
+      <Post post={post} />
+    </>
+  );
 };
 
 type Params = {
