@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Breakpoints, Colors, Fonts } from "./constants";
 
 // https://www.joshwcomeau.com/css/custom-css-reset/
 const CSSReset = createGlobalStyle`
@@ -65,9 +66,55 @@ const CSSReset = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   html, body, #__next {
-    /* font-family:; */
-    /* color:; */
-    /* background-color: */
+    font-family: ${Fonts.CrimsonPro};
+    color: ${Colors.RavensPurple};
+    background-color: ${Colors.SaintsGold}
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${Fonts.Jost};
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-weight: 900;
+    padding-bottom: 28px;
+
+    @media (min-width: ${Breakpoints.Laptop}) {
+      font-size: 36px;
+      padding-bottom: 32px;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    
+    @media (min-width: ${Breakpoints.Laptop}) {
+      font-size: 28px;
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+  }
+  
+  p {
+    padding-bottom: 20px;
+
+    @media (min-width: ${Breakpoints.Laptop}) {
+      font-size: 20px;
+      padding-bottom: 24px;
+    }
+  }
+
+  a {
+    color: inherit;
+    
+    :hover {
+      color: ${Colors.DolphinsTeal};
+      text-decoration: none;
+    }
   }
 `;
 

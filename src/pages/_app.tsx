@@ -1,11 +1,15 @@
 import type { AppProps } from "next/app";
-import { GlobalStyles } from "../styles/globals";
+import Layout from "../components/library/Layout";
+import { CSSReset, GlobalStyles } from "../styles/globals";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <CSSReset />
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
