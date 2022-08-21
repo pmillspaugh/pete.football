@@ -33,7 +33,7 @@ const MaxWidthWrapper = styled.div`
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 48px;
+  padding: 48px 24px;
 
   @media (min-width: ${Breakpoints.Tablet}) {
     padding: 60px 32px;
