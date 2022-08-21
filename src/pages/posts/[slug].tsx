@@ -4,10 +4,12 @@ import { markdownToHtml } from "../../helpers/markdown.helpers";
 import { getAllPosts, getPostData } from "../../helpers/posts.helpers";
 
 const PostPage = ({ post }: PostProps) => {
+  const postPageTitle = `${post.metadata.title} | Pete Milly ⋅ Football`;
+
   return (
     <>
       <Head>
-        <title>{post.metadata.title} | Pete Milly ⋅ Football</title>
+        <title>{postPageTitle}</title>
         <meta name="description" content={post.metadata.title} />
       </Head>
       <Post post={post} />
