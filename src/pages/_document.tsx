@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 class PeteMillyDoc extends Document {
@@ -70,6 +71,11 @@ class PeteMillyDoc extends Document {
         <body>
           <Main />
           <NextScript />
+          {/* Cloudflare Web Analytics */}
+          <Script
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "659601c3710f4a01aacef8ae1f39132a"}'
+          />
         </body>
       </Html>
     );
