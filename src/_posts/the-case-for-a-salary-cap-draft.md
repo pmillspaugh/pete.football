@@ -53,6 +53,6 @@ My expectation is that the salary cap draft format will be (1) more fun, which i
 
 My league has had some passionate rules/format debates in the past, namely Yahoo versus ESPN (I may write another post on that later), but this was the ugliest and most personal to date. The vote came in tied 6-6 (we needed 7 votes to make the switch), which triggered an emotional resignation by our commissioner, followed by a shocking last minute vote flip to salary cap by a team owner who had stayed pretty quiet in the debate. So this year we are testing out the salary cap format — more on how it goes after the season.
 
-I’d love to hear any other arguments for or against and any stories from people in salary cap leagues. [DM me on Twitter](https://twitter.com/pete_millspaugh) or [jump in the comments on Reddit](https://www.reddit.com/user/pete-milly/).
+I’d love to hear any other arguments for or against and any stories from people in salary cap leagues. [DM me on Twitter](https://twitter.com/pete_millspaugh) or [jump in the comments on Reddit](https://www.reddit.com/r/fantasyfootball/comments/wlry9r/auction_vs_snake_draft_what_strategy_do_you_prefer/il8s6ii/?context=3).
 
 Thanks for reading.
