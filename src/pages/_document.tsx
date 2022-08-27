@@ -71,7 +71,6 @@ class PeteMillyDoc extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* Cloudflare Web Analytics */}
         </body>
       </Html>
     );
