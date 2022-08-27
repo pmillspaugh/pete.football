@@ -5,7 +5,6 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 class PeteMillyDoc extends Document {
