@@ -72,10 +72,6 @@ class PeteMillyDoc extends Document {
           <Main />
           <NextScript />
           {/* Cloudflare Web Analytics */}
-          <Script
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "659601c3710f4a01aacef8ae1f39132a"}'
-          />
         </body>
       </Html>
     );
