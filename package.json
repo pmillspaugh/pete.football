@@ -2,6 +2,7 @@
   "name": "pete-milly-football",
   "version": "0.1.0",
   "private": true,
+  "pnpm": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
