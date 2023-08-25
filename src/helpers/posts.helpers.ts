@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { PostMetadata } from "../interfaces/posts";
 
 const POSTS_DIR = join(process.cwd(), "src/_posts");
 
@@ -9,18 +10,22 @@ export const getPostData = (slug: string) => {
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content: mdContent } = matter(fileContents);
 
-  const metadata = { ...data, slug };
+  const { title, date } = data;
+  const metadata: PostMetadata = { title, date, slug };
 
   return { metadata, mdContent };
 };
 
-// TODO: sort posts by date (desc) upon publishing a second post
 export const getAllPosts = () => {
   const postSlugs = fs.readdirSync(POSTS_DIR);
 
-  return postSlugs.map((slugFilename) => {
-    const slug = slugFilename.replace(/\.md$/, "");
-    const { metadata: postMetadata } = getPostData(slug);
-    return { ...postMetadata, slug };
-  });
+  const allPosts = postSlugs
+    .map((slugFilename) => {
+      const slug = slugFilename.replace(/\.md$/, "");
+      const { metadata: postMetadata } = getPostData(slug);
+      return { ...postMetadata, slug };
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return allPosts;
 };

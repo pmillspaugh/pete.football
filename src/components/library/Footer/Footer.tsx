@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Fonts } from "../../../styles/constants";
 
 const Footer = () => {
-  return <StyledFooter>© 2022 Peter Millspaugh</StyledFooter>;
+  return <StyledFooter>© 2023 Peter Millspaugh</StyledFooter>;
 };
 
 const StyledFooter = styled.footer`

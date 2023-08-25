@@ -36,6 +36,11 @@ const PostListItem = styled.li`
   font-size: 20px;
   font-family: ${Fonts.Jost};
   font-weight: 600;
+  padding-bottom: 16px;
+
+  &:last-child {
+    padding-bottom: 0px;
+  }
 
   & a {
     text-decoration: none;

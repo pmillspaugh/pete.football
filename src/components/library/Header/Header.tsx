@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import { Colors } from "../../../styles/constants";
-import logo from "../../../../public/images/logo.svg";
+import { Colors, Fonts } from "../../../styles/constants";
+import CrystalFootball from "./CrystalFootball";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
         <HeaderWrapper>
           <Link href="/" passHref>
             <LogoWrapper>
-              <Image src={logo} alt="pete milly . football" />
+              <CrystalFootball />
             </LogoWrapper>
           </Link>
         </HeaderWrapper>
