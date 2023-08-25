@@ -12,7 +12,8 @@ const Home = ({ postsMetadata }: HomeProps) => {
     <main>
       <CenteredH1>What&apos;s this?</CenteredH1>
       <p>
-        In early August, I wrote a pitch to my fantasy football league making{" "}
+        In early August 2022, I wrote a pitch to my fantasy football league
+        making{" "}
         <Link href="/posts/the-case-for-a-salary-cap-draft">
           <a target="_blank">
             the case to switch to a salary cap draft format.
