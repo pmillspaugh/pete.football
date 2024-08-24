@@ -21,7 +21,6 @@ const Post = ({ post }: PostProps) => {
 };
 
 const PostDate = styled.div`
-  font-family: ${Fonts.Jost};
   font-style: italic;
   padding-bottom: 12px;
 `;

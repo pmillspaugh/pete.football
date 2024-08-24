@@ -66,15 +66,16 @@ const CSSReset = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   html, body, #__next {
-    font-family: ${Fonts.CrimsonPro};
+    font-family: ${Fonts.Piazzolla};
     color: ${Colors.RavensPurple};
     background-color: ${Colors.SaintsGold}
   }
 
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${Fonts.Jost};
+    text-wrap: balance;
     line-height: 1.25;
+    letter-spacing: 0.05em;
   }
 
   h1 {
@@ -82,13 +83,13 @@ const GlobalStyles = createGlobalStyle`
     padding-bottom: 28px;
 
     @media (min-width: ${Breakpoints.Laptop}) {
-      font-size: 36px;
+      font-size: 48px;
       padding-bottom: 32px;
     }
   }
 
   h2 {
-    font-weight: 600;
+    font-weight: 700;
     padding-top: 8px;
     padding-bottom: 20px;
     
@@ -101,6 +102,7 @@ const GlobalStyles = createGlobalStyle`
   
   p {
     padding-bottom: 20px;
+    text-wrap: pretty;
 
     @media (min-width: ${Breakpoints.Laptop}) {
       font-size: 20px;
@@ -114,6 +116,13 @@ const GlobalStyles = createGlobalStyle`
     :hover {
       color: ${Colors.DolphinsTeal};
       text-decoration: none;
+    }
+  }
+
+  ol {
+    @media (min-width: ${Breakpoints.Laptop}) {
+      font-size: 20px;
+      padding-bottom: 24px;
     }
   }
 `;

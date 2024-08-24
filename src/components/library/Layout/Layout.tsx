@@ -27,7 +27,7 @@ const LayoutWrapper = styled.div`
 `;
 
 const MaxWidthWrapper = styled.div`
-  max-width: 600px;
+  max-width: 800px;
 `;
 
 const FlexContainer = styled.div`

@@ -13,6 +13,5 @@ export enum Breakpoints {
 }
 
 export enum Fonts {
-  Jost = "'Jost', sans-serif",
-  CrimsonPro = "'Crimson Pro', serif",
+  Piazzolla = "'Piazzolla', serif",
 }
