@@ -34,7 +34,6 @@ const PostListItem = styled.li`
   list-style: none;
   text-align: center;
   font-size: 20px;
-  font-family: ${Fonts.Jost};
   font-weight: 600;
   padding-bottom: 16px;
 

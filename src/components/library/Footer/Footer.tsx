@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Fonts } from "../../../styles/constants";
 
 const Footer = () => {
-  return <StyledFooter>© 2023 Peter Millspaugh</StyledFooter>;
+  return <StyledFooter>© 2022-2024 Pete Millspaugh</StyledFooter>;
 };
 
 const StyledFooter = styled.footer`
@@ -11,9 +11,8 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: ${Fonts.Jost};
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 export default Footer;

@@ -66,15 +66,15 @@ const CSSReset = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   html, body, #__next {
-    font-family: ${Fonts.CrimsonPro};
+    font-family: ${Fonts.Piazzolla};
     color: ${Colors.RavensPurple};
     background-color: ${Colors.SaintsGold}
   }
 
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${Fonts.Jost};
     line-height: 1.25;
+    letter-spacing: 0.05em;
   }
 
   h1 {
